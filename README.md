@@ -1,173 +1,176 @@
-🏦 Pagos E2E – Playwright + Cucumber + TypeScript
+# 🏦 Pagos E2E – Playwright + Cucumber + TypeScript
 
-Proyecto de automatización End-to-End de un flujo de Pago de Servicios en una aplicación demo de Homebanking.
+## Proyecto de automatización End-to-End que valida un flujo completo de Pago de Servicios en una aplicación demo de Homebanking.
 
-🔗 Repositorio:
-https://github.com/Rgenes28/pagos-e2e
+### 🔗 Repositorio:
+### https://github.com/Rgenes28/pagos-e2e
 
-📌 Caso de Prueba Automatizado
+# 1️⃣ 📌 Descripción del Proyecto
 
-Escenario implementado:
+## Este proyecto automatiza un flujo real de negocio simulando el comportamiento de un usuario final dentro de una aplicación bancaria.
 
-Login con usuario demo
+## El objetivo es validar:
 
-Navegación a Pago de Servicios
+### Flujo completo de pago
 
-Selección del servicio 🌐 Internet - Fibertel
+### Descarga de comprobante en PDF
 
-Visualización del monto sugerido
+### Lectura automática del PDF
 
-Confirmación del pago
+### Validación de información crítica del pago
 
-Validación del mensaje exitoso
+## Se implementa utilizando:
 
-Validación del botón Descargar PDF
+### Playwright
 
-Descarga del comprobante
+### Cucumber (BDD)
 
-Lectura automática del PDF
+### TypeScript
 
-Validación de:
+### Page Object Model (POM)
 
-Nombre del usuario
+### GitHub Actions (CI)
 
-Proveedor
+# 2️⃣ 🧪 Caso de Prueba Automatizado
+## 📍 Escenario implementado
 
-Concepto del pago
+### Login con usuario demo
 
-Estado acreditado
+### Navegación a Pago de Servicios
 
-Monto correcto (normalizado)
+### Selección del servicio 🌐 Internet – Fibertel
 
-🧱 Estructura del Proyecto
-src/tests
-│
-├── features
-│   └── pago_servicio.feature
-│
-├── pages
-│   ├── login.page.ts
-│   ├── home.page.ts
-│   └── pago.page.ts
-│
-├── step-definitions
-│   └── pago.steps.ts
-│
-├── support
-│   ├── hooks.ts
-│   └── world.ts
-│
-├── utils
-│   └── pdf.utils.ts
+### Visualización del monto sugerido
 
-🧩 Arquitectura y Buenas Prácticas
+### Confirmación del pago
 
-Implementación de Page Object Model
+### Validación del mensaje exitoso
 
-Separación clara de responsabilidades
+### Validación del botón Descargar PDF
 
-Uso de Custom World para compartir estado entre steps
+### Descarga del comprobante
 
-Validación robusta del PDF descargado
+### Lectura automática del PDF
 
-Generación automática de reporte HTML
+### Validación de:
 
-Código preparado para escalar
+### Nombre del usuario
 
-⚙️ Tecnologías Utilizadas
+### Proveedor
 
-Playwright
+### Concepto del pago
 
-Cucumber
+### Estado acreditado
 
-TypeScript
+### Monto correcto (normalizado)
 
-dotenv
+# 3️⃣ 🏗️ Estructura del Proyecto
+    src
+      └── tests
 
-pdf-parse
+        ├── features
+      
+        │     └── pago_servicio.feature
+      
+        ├── pages
+      
+        │     ├── login.page.ts
+      
+        │     ├── home.page.ts
+      
+        │     └── pago.page.ts
+      
+        ├── step-definitions
+      
+        │     └── pago.steps.ts
+      
+        ├── support
+        
+        │     ├── hooks.ts
+      
+        │     └── world.ts
+        
+        └── utils
+      
+            └── pdf.utils.ts
 
-multiple-cucumber-html-reporter
+### Arquitectura basada en:
 
-Node.js
+### Page Object Model
 
-🚀 Instalación
-1️⃣ Clonar el repositorio
-git clone https://github.com/Rgenes28/pagos-e2e.git
-cd pagos-e2e
+### Separación clara entre Steps y lógica de UI
 
-2️⃣ Instalar dependencias
-npm install
+### Utilidades reutilizables para lectura de PDF
 
-🔐 Variables de Entorno
+# 4️⃣ 🚀 Instalación y Ejecución
+## 1️⃣ Clonar repositorio
+### git clone https://github.com/Rgenes28/pagos-e2e.git
+### cd pagos-e2e
 
-Crear archivo .env en la raíz del proyecto:
+## 2️⃣ Instalar dependencias
+### npm install
 
-BASE_URL=https://homebanking-demo-tests.netlify.app
+## 3️⃣ Configurar variables de entorno
 
-▶️ Ejecutar las Pruebas
-npm run test
+### Crear archivo .env
 
+### BASE_URL=https://homebanking-demo-tests.netlify.app
 
-Este comando:
+## 4️⃣ Ejecutar pruebas
+### npm run test
 
-Ejecuta Cucumber
+## 5️⃣ 📊 Reportes
 
-Genera el archivo JSON
+### El proyecto genera reporte HTML con Cucumber.
 
-Genera el reporte HTML automáticamente
+### Al finalizar la ejecución:
 
-📊 Reporte HTML
+### Se genera el reporte
 
-Después de la ejecución, el reporte se genera en:
+### Se validan logs del flujo
 
-reports/html-report/index.html
+### Se confirma lectura y validación del PDF
 
+## 6️⃣ 🎯 Buenas Prácticas Implementadas
 
-Incluye:
+### Uso de Locator en lugar de selectores frágiles
 
-Resultado del escenario
+### Uso de expect con auto-wait de Playwright
 
-Metadata de ejecución
+### Separación de responsabilidades
 
-Información del entorno
+### Validaciones reales de negocio
 
-Evidencia del PDF descargado
+### Manejo de descargas
 
-📄 Validación del Comprobante PDF
+### Normalización de texto para validación robusta
 
-Se utiliza pdf-parse para:
+# 7️⃣ 👨‍💻 Autor
 
-Leer el texto del comprobante
+## Ronaldo Genes
+## QA Automation Engineer
 
-Normalizar valores numéricos
+# 💡 Objetivo del Repositorio
 
-Validar:
+### Este repositorio está pensado como template para colegas QA Junior que quieran:
 
-Cliente
+### Aprender automatización E2E
 
-Proveedor
+### Implementar BDD con Cucumber
 
-Concepto
+### Leer y validar PDFs en pruebas
 
-Estado del pago
+### Aplicar buenas prácticas reales
 
-Monto correcto
+### Si te sirve, dale ⭐ al repo y compártelo.
 
-Esto asegura que no solo la UI funciona correctamente, sino también el documento generado por el sistema.
 
-🎯 Objetivo del Proyecto
 
-Este repositorio busca servir como:
 
-Template para QA Juniors
 
-Ejemplo práctico de BDD con Playwright
 
-Proyecto demostrable para portafolio profesional
 
-Base escalable para futuras pruebas E2E
 
-👨‍💻 Autor
 
-Ronaldo Genes
-QA Automation Engineer – Colombia
+
+
