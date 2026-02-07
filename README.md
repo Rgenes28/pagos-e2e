@@ -1,62 +1,46 @@
-#🏦 Pagos E2E – Playwright + Cucumber + TypeScript
+🏦 Pagos E2E – Playwright + Cucumber + TypeScript
 
-##Proyecto de automatización End-to-End de un flujo de Pago de Servicios en una aplicación demo de Homebanking.
+Proyecto de automatización End-to-End de un flujo de Pago de Servicios en una aplicación demo de Homebanking.
 
-#🔗 Repositorio:
-##https://github.com/Rgenes28/pagos-e2e
+🔗 Repositorio:
+https://github.com/Rgenes28/pagos-e2e
 
-##Este proyecto fue construido como template educativo para QA Engineers que quieran aprender o reforzar:
+📌 Caso de Prueba Automatizado
 
-###Playwright
+Escenario implementado:
 
-###Cucumber (BDD)
+Login con usuario demo
 
-###TypeScript
+Navegación a Pago de Servicios
 
-###Page Object Model (POM)
+Selección del servicio 🌐 Internet - Fibertel
 
-###Validación de PDFs
+Visualización del monto sugerido
 
-###Generación de reportes HTML
+Confirmación del pago
 
-###Uso de Custom World en Cucumber
+Validación del mensaje exitoso
 
-#📌 Caso de Prueba Automatizado
+Validación del botón Descargar PDF
 
-##Escenario implementado:
+Descarga del comprobante
 
-###Login con usuario demo
+Lectura automática del PDF
 
-###Navegación a "Pago de Servicios"
+Validación de:
 
-###Selección del servicio "🌐 Internet - Fibertel"
+Nombre del usuario
 
-###Visualización del monto sugerido
+Proveedor
 
-###Confirmación del pago
+Concepto del pago
 
-###Validación del mensaje exitoso
+Estado acreditado
 
-###Validación del botón "Descargar PDF"
+Monto correcto (normalizado)
 
-###Descarga del comprobante
-
-###Lectura automática del PDF
-
-###Validación de:
-
-###Nombre del usuario
-
-###Proveedor
-
-###Concepto del pago
-
-###Estado acreditado
-
-###Monto correcto (normalizado)
-
-#🧱 Estructura del Proyecto
-###src/tests
+🧱 Estructura del Proyecto
+src/tests
 │
 ├── features
 │   └── pago_servicio.feature
@@ -76,53 +60,47 @@
 ├── utils
 │   └── pdf.utils.ts
 
-#🧩 Arquitectura y Buenas Prácticas
+🧩 Arquitectura y Buenas Prácticas
 
-###Implementación de Page Object Model
+Implementación de Page Object Model
 
-###Separación clara de responsabilidades
+Separación clara de responsabilidades
 
-###Uso de Custom World para compartir estado entre steps
+Uso de Custom World para compartir estado entre steps
 
-###Validación robusta del PDF descargado
+Validación robusta del PDF descargado
 
-###Generación automática de reporte HTML
+Generación automática de reporte HTML
 
-###Código estructurado para escalabilidad
+Código preparado para escalar
 
-#⚙️ Tecnologías Utilizadas
+⚙️ Tecnologías Utilizadas
 
-###Playwright
+Playwright
 
-###Cucumber
+Cucumber
 
-###TypeScript
+TypeScript
 
-###dotenv
+dotenv
 
-###pdf-parse
+pdf-parse
 
-###multiple-cucumber-html-reporter
+multiple-cucumber-html-reporter
 
-###Node.js
+Node.js
 
 🚀 Instalación
-
-Clonar el repositorio:
-
+1️⃣ Clonar el repositorio
 git clone https://github.com/Rgenes28/pagos-e2e.git
 cd pagos-e2e
 
-
-Instalar dependencias:
-
+2️⃣ Instalar dependencias
 npm install
 
 🔐 Variables de Entorno
 
-Crear archivo .env en la raíz del proyecto
-
-Agregar:
+Crear archivo .env en la raíz del proyecto:
 
 BASE_URL=https://homebanking-demo-tests.netlify.app
 
@@ -175,7 +153,7 @@ Estado del pago
 
 Monto correcto
 
-Esta validación asegura que no solo la UI funciona correctamente, sino también el documento generado por el sistema.
+Esto asegura que no solo la UI funciona correctamente, sino también el documento generado por el sistema.
 
 🎯 Objetivo del Proyecto
 
@@ -192,5 +170,4 @@ Base escalable para futuras pruebas E2E
 👨‍💻 Autor
 
 Ronaldo Genes
-QA Automation Engineer
-Colombia
+QA Automation Engineer – Colombia
