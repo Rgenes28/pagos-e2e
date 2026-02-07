@@ -15,6 +15,7 @@ export class HomePage {
         this.userName = page.locator('#user-name');
     }
     async goTo(){
+        console.log('BASE_URL:', process.env.BASE_URL);
         await this.page.goto(process.env.BASE_URL!);
     }
 

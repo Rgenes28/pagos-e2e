@@ -21,8 +21,8 @@ export class PagoPage {
 
     }
     async seleccionarServicio(servicio: string) {
-        await this.selectServicio.selectOption({ label: servicio });
-        //await this.page.waitForTimeout(5000);
+        await this.selectServicio.waitFor({ state: 'visible' });
+        await this.selectServicio.selectOption(servicio);
         console.log(`Servicio seleccionado: ${servicio}`);
 
     }
@@ -79,6 +79,7 @@ export class PagoPage {
         const text = await leerTextoPDF(filePath);
 
         expect(text).toContain(cliente);
+        console.log("Usuario capturado:", cliente);
         expect(text).toContain(proveedor);
         expect(text).toContain("Pago por servicio de Internet");
         expect(text).toContain("Pago acreditado");
