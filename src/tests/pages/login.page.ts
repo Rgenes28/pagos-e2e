@@ -13,14 +13,11 @@ export class LoginPage {
         this.loginButton = page.locator('#login-btn');
     }
 
-    async fillUser(username: string) {
+    async loginUser(username: string, password: string) {
+        await this.usernameInput.waitFor({ state: 'visible' });
         await this.usernameInput.fill(username);
-    }
-    async fillPassword(password: string) {
         await this.passwordInput.fill(password);
-    }
-    async submit() {
         await this.loginButton.click();
-        console.log('Se ha enviado el formulario de inicio de sesion');
+        console.log(`Usuario ${username} ha iniciado sesión`);
     }
 }

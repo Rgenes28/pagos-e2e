@@ -7,15 +7,12 @@ Característica: Pago de servicios
 
   @pago
   Escenario: Pago exitoso de servicio Fibertel
-    Dado el usuario se encuentra en la pagina de inicio de sesion
-    Cuando ingresa el usuario "demo"
-    Y ingresa la contrasena "demo123"
-    Y confirma el inicio de sesion
-    Y navega a la seccion Pago de Servicios
-    Y selecciona el servicio "🌐 Internet - Fibertel"
-    Y visualiza el monto "$12,000"
+    Dado que el usuario inició sesión como "demo" con la contraseña "demo123"
+    Y navega a la sección Pago de Servicios
+    Cuando selecciona el servicio "🌐 Internet - Fibertel"
+    Entonces visualiza el monto "$12,000"
     Y confirma el pago
-    Entonces se muestra un mensaje de pago exitoso
-    Y se habilita el boton Descargar PDF
+    Y se muestra un mensaje de pago exitoso
+    Y se habilita el botón Descargar PDF
     Y el comprobante PDF se genera con los datos correctos
 
